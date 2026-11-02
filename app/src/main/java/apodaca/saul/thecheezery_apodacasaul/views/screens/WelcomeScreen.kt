@@ -62,6 +62,7 @@ fun WelcomeScreen(innerPadding: PaddingValues){
                 color = Dusty_white,
                 fontFamily = FontFamily.SansSerif,
                 fontSize = 15.sp)
+            //
 
             Spacer(modifier = Modifier.size(30.dp))
 
