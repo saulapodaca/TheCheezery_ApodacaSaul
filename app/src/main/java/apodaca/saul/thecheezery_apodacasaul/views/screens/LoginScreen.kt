@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -41,9 +42,10 @@ fun LoginScreen(innerPadding: PaddingValues){
 
     Box(
         modifier = Modifier.background(Color.White)
+            .padding(innerPadding)
     ){
         Column(
-            modifier = Modifier.padding(innerPadding)
+            modifier = Modifier
                 .padding(40.dp)
                 .fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally
@@ -66,9 +68,11 @@ fun LoginScreen(innerPadding: PaddingValues){
             Spacer(Modifier.size(15.dp))
 
             SecureTextField(
-                state= password, label = {
+                state= password,
+                label = {
                     Text("Contraseña")
-                }, textObfuscationMode = TextObfuscationMode.RevealLastTyped,
+                },
+                textObfuscationMode = TextObfuscationMode.RevealLastTyped,
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password)
             )
 
