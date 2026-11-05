@@ -32,7 +32,10 @@ import apodaca.saul.thecheezery_apodacasaul.ui.theme.Dusty_white
 import apodaca.saul.thecheezery_apodacasaul.ui.theme.Purple_grey
 
 @Composable
-fun WelcomeScreen(innerPadding: PaddingValues){
+fun WelcomeScreen(
+    innerPadding: PaddingValues,
+    onGetStarted: () -> Unit = {}
+){
     Column(
         modifier = Modifier
             .padding(innerPadding)
@@ -67,7 +70,7 @@ fun WelcomeScreen(innerPadding: PaddingValues){
             Spacer(modifier = Modifier.size(30.dp))
 
             Button(
-                onClick = {}
+                onClick = onGetStarted
             ) {
                 Text("Get started!")
             }
